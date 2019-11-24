@@ -11,16 +11,7 @@ function alias($string)
 	$string = url_title($string, '-', TRUE);
 	return $string;
 }
-
-function excerpt($string, $q)
-{	
-	$pattern = '#<[^>]+>#';
-	$string = preg_replace($pattern, ' ', $string);
-	$string = word_limiter($string, $q);
-	return $string;
-}
-
-
+		
 function config($where)
 {
 	$Blog =& get_instance();
